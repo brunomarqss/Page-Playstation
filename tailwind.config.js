@@ -1,10 +1,14 @@
 module.exports = {
   content: [
-    './**/*.html', // Procura em todos os arquivos HTML
-    './src/**/*.{js,ts,jsx,tsx}' // Procura em arquivos JavaScript e TypeScript na pasta src
+    './**/*.html', // Ou os caminhos corretos para seus arquivos
+    './src/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        playst: '#01062b', // Nome personalizado para a sua cor
+      },
+    },
   },
   plugins: [],
 }
