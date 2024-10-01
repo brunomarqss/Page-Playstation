@@ -717,6 +717,11 @@ video {
      object-fit: cover;
 }
 
+.object-top {
+  -o-object-position: top;
+     object-position: top;
+}
+
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
