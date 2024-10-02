@@ -1,37 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Playstation</title>
     <link href="src/output.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .fade-in {
+            opacity: 0;
+            transition: opacity 1s ease-in;
+        }
+
+        .fade-in-visible {
+            opacity: 1;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const elements = document.querySelectorAll('.fade-in');
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('fade-in-visible');
+                    }
+                });
+            });
+
+            elements.forEach(element => observer.observe(element));
+        });
+    </script>
+
 </head>
+
 <body class="bg-playst">
 
     <!-- Hero Section -->
-    <section class="bg-[url('/imagens/ps5-hero.jpg')] bg-cover bg-center h-screen flex flex-col justify-center items-center text-white">
+    <section
+        class="bg-[url('/imagens/ps5-hero.jpg')] bg-cover bg-center h-screen flex flex-col justify-center items-center text-white">
         <h1 class="text-4xl font-bold mb-4">Bem-vindo ao mundo PlayStation</h1>
         <p class="text-xl mb-8">Descubra a nova era dos games com o PlayStation 5.</p>
-        <a href="#comprar" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full">Comprar Agora</a>
+        <a href="#comprar" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-all hover:scale-105 animate-bounce">Comprar Agora</a>
+
+
     </section>
 
     <!-- Features Section -->
-    <section class="py-16 bg-gray-100 text-center">
+    <section class="py-16 bg-gray-100 text-center fade-in">
         <h2 class="text-3xl font-bold mb-8">Por que escolher o PlayStation 5?</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div>
-                <img src="/imagens/rapidez.webp" alt="Velocidade impressionante" class="mx-auto mb-4">
+                <img src="/imagens/rapidez.webp" alt="Velocidade impressionante"
+                    class="mx-auto mb-4 w-full object-cover h-96">
                 <h3 class="text-xl font-semibold mb-2">Velocidade impressionante</h3>
                 <p>Acelere com o SSD ultrarrápido.</p>
             </div>
             <div>
-                <img src="/imagens/grafico realista.jpg" alt="Gráficos imersivos" class="mx-auto mb-4">
+                <img src="/imagens/grafico realista.jpg" alt="Gráficos imersivos"
+                    class="mx-auto mb-4 w-full object-cover h-96">
                 <h3 class="text-xl font-semibold mb-2">Gráficos imersivos</h3>
                 <p>Desfrute de gráficos incríveis com Ray Tracing.</p>
             </div>
             <div>
-                <img src="/imagens/tl2.jpg" alt="Jogos exclusivos" class="mx-auto mb-4">
+                <img src="/imagens/tl2.jpg" alt="Jogos exclusivos" class="mx-auto mb-4 w-full object-cover h-96">
                 <h3 class="text-xl font-semibold mb-2">Jogos exclusivos</h3>
                 <p>Acesse uma biblioteca de jogos exclusivos.</p>
             </div>
@@ -39,52 +71,60 @@
     </section>
 
     <!-- Games Section -->
-    <section class="py-16 text-center">
+    <section class="py-16 text-center fade-in">
         <h2 class="text-3xl font-bold text-white mb-8">Experimente os Melhores Jogos Exclusivos</h2>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div class="relative">
-                <img src="/imagens/goodd.webp" alt="God of War" class="w-full h-64 object-cover object-top rounded-lg">
-                <div class="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+            <div class="relative transition-all hover:scale-105">
+                <img src="/imagens/goodd.webp" alt="God of War" class="w-full h-80 object-cover object-top rounded-lg">
+                <div class="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center">
                     <h3 class="text-white text-2xl font-semibold">God of War</h3>
                 </div>
+
             </div>
-            <div class="relative">
-                <img src="/imagens/spiderme (1).jpeg" alt="Spider-Man: Miles Morales" class="w-full h-64 object-cover rounded-lg">
-                <div class="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+
+            <div class="relative transition-all hover:scale-105">
+                <img src="/imagens/spiderme (1).jpeg" alt="Spider-Man: Miles Morales"
+                    class="w-full h-80 object-cover rounded-lg">
+                <div class="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center">
                     <h3 class="text-white text-2xl font-semibold">Spider-Man: Miles Morales</h3>
                 </div>
             </div>
-            <div class="relative">
-                <img src="/imagens/us.jpg" alt="The Last of Us Part II" class="w-full h-64 object-cover object-top rounded-lg">
-                <div class="absolute inset-0 bg-black bg-opacity-50 flex justify-center items-center">
+
+            <div class="relative transition-all hover:scale-105">
+                <img src="/imagens/us.jpg" alt="The Last of Us Part II"
+                    class="w-full h-80 object-cover object-top rounded-lg">
+                <div class="absolute inset-0 bg-black bg-opacity-60 flex justify-center items-center">
                     <h3 class="text-white text-2xl font-semibold">The Last of Us Part II</h3>
                 </div>
             </div>
+
         </div>
     </section>
 
-<!-- Footer -->
-<footer class="bg-gray-800 text-white py-3">
-    <div class="container mx-auto text-center">
-        <div class="flex justify-center space-x-6 mb-4">
-            <a href="#" class="hover:text-gray-400">Suporte</a>
-            <a href="#" class="hover:text-gray-400">Contato</a>
-            <a href="#" class="hover:text-gray-400">Termos de Uso</a>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-3">
+        <div class="container mx-auto text-center">
+            <div class="flex justify-center space-x-6 mb-4">
+                <a href="#" class="hover:text-gray-400">Suporte</a>
+                <a href="#" class="hover:text-gray-400">Contato</a>
+                <a href="#" class="hover:text-gray-400">Termos de Uso</a>
+            </div>
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="text-white hover:text-gray-400 transition-all hover:scale-110">
+                    <i class="fa-brands fa-facebook-f fa-2x"></i>
+                </a>
+                <a href="#" class="text-white hover:text-gray-400 transition-all hover:scale-110">
+                    <i class="fa-brands fa-instagram fa-2x"></i>
+                </a>
+                <a href="#" class="text-white hover:text-gray-400 transition-all hover:scale-110">
+                    <i class="fa-brands fa-twitter fa-2x"></i>
+                </a>
+
+            </div>
         </div>
-        <div class="flex justify-center space-x-6">
-            <a href="#" class="text-white hover:text-gray-400">
-                <i class="fa-brands fa-facebook-f fa-2x"></i>
-            </a>
-            <a href="#" class="text-white hover:text-gray-400">
-                <i class="fa-brands fa-instagram fa-2x"></i>
-            </a>
-            <a href="#" class="text-white hover:text-gray-400">
-                <i class="fa-brands fa-twitter fa-2x"></i>
-            </a>
-        </div>
-    </div>
-</footer>
+    </footer>
 
 
 </body>
+
 </html>
