@@ -20,4 +20,4 @@ A página inclui uma chamada direta para a compra do **PlayStation 5**, destacan
 
 ---
 
-**Desenvolvido por [Bruno Rodrigues Marques](https://github.com/seu-usuario)**
+**Desenvolvido por [Bruno Rodrigues Marques](https://github.com/brunomarqss)**
