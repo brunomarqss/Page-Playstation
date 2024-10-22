@@ -12,6 +12,8 @@ Bem-vindo à landing page promocional do **PlayStation 5**, onde você pode desc
 
 A página inclui uma chamada direta para a compra do **PlayStation 5**, destacando suas vantagens e os jogos exclusivos que o tornam um dos consoles mais desejados.
 
+👉 **Confira a landing page ao vivo [aqui](https://page-playstation.vercel.app/).**
+
 ## 📞 Seções adicionais:
 
 - **Suporte**: Obtenha ajuda diretamente da PlayStation.
